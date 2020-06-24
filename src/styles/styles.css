@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.box-layout {
+  align-items: center;
+  background: url('/images/mp.jpg');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.box-layout__box {
+  background: white;
+  opacity: 0.9;
+  border-radius: 3px;
+  text-align: center;
+  width: 25rem;
+  padding: 3.2rem 1.6rem;
+}
+
+.header {
+  background: #364051;
+  
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.header__button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 0 2rem;
+}
+
+.button-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem;
+  background-color: rgb(37, 121, 149);
+  border-radius: 3px;
+  margin: 1rem 0.1rem;
+}
+
+.button-warning {
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem;
+  background-color: rgb(164, 167, 22);
+  border-radius: 3px;
+  border: none;
+  font-size: large;
+  margin: 1rem 0.1rem;
+}
+
+.button-cancel {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem;
+  background-color: #364051;
+  border-radius: 3px;
+  border: none;
+  font-size: small;
+  margin: 0.3rem 0.1rem;
+}
+
+.button-change {
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem;
+  background-color: darkgreen;
+  border-radius: 3px;
+  border: none;
+  font-size: small;
+  margin: 0.3rem 0.1rem;
+}
