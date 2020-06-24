@@ -1,3 +1,4 @@
+
 const fiscaliasReducer = (state, action) => { //reducer de la lista de fiscalias, el estado es definido por la accion
     switch(action.type){
       case 'POPULATE_FISCALIA':
