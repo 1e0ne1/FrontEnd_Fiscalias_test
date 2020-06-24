@@ -5,7 +5,7 @@ const Header = ({logout}) => { //componente para el Header
       <header className="header">
           <div className="content-container">
               <div className="header__content">               
-                  <h1>Fiscalias</h1>
+                  <h1>Fiscalias MP</h1>
                   <button className="header__button" onClick={logout}>Logout</button>
               </div>
           </div>

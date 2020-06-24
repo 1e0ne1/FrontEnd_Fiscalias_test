@@ -4,6 +4,7 @@ import Fiscalias from './Fiscalias'
 import Header from './Header'
 import fetch from 'node-fetch'
 
+//componente para login y listado de fiscalias
 const App = () => {
   
     const [auth, setAuth] = useState(false) //estados para poder almacenar el estado de autenticacion, token, usuaio y errorres

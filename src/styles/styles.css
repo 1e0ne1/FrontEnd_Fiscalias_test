@@ -57,8 +57,13 @@ code {
 
 .content-container {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 60rem;
   padding: 0 2rem;
+}
+
+.content-fiscalia {
+  width: 100%;
+  padding: 1rem 0;
 }
 
 .button-link {
@@ -72,6 +77,7 @@ code {
 }
 
 .button-warning {
+  text-decoration: none;
   color: white;
   font-weight: bold;
   padding: 0.4rem;
@@ -83,8 +89,9 @@ code {
 }
 
 .button-cancel {
-  position: absolute;
   color: white;
+  text-decoration: none;
+  text-align: center;
   font-weight: bold;
   padding: 0.4rem;
   background-color: #364051;
@@ -95,6 +102,7 @@ code {
 }
 
 .button-change {
+  text-decoration: none;
   color: white;
   font-weight: bold;
   padding: 0.4rem;
@@ -103,4 +111,19 @@ code {
   border: none;
   font-size: small;
   margin: 0.3rem 0.1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.text-input {
+  border: 1px solid #cacccd;
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }

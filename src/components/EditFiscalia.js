@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import fetch from 'node-fetch'
 import { Redirect } from 'react-router-dom';
+import Header from './Header';
 
 const EditFiscalia = (props) => { //componente para edicion de fiscalias
   
@@ -36,6 +37,11 @@ const EditFiscalia = (props) => { //componente para edicion de fiscalias
           throw new Error('Something went worng')
       }
     }
+
+    const logout = () => {
+        localStorage.removeItem("tk")
+        
+    }
   
   
     const modificar = (e) => { //este metodo es el encargado de enviar los datos a la REST API para actualizacion
@@ -56,23 +62,42 @@ const EditFiscalia = (props) => { //componente para edicion de fiscalias
     
   
     return ( //cuerpo del componente
-    <div className='content-container'>
-      <h1>Editar Fiscalia</h1>
-      <form onSubmit={modificar}>
-        Nombre: <input value={name} onChange={(e) => setName(e.target.value)} />
-        <br/>
-        Lat: <input value={lat} onChange={(e) => setLat(e.target.value)} />
-        <br/>
-        Lon: <input value={lon} onChange={(e) => setLon(e.target.value)} />
-        <br/>
-        Telefono: <input value={phone} onChange={(e) => setPhone(e.target.value)} />
-        <br/>
-        Departamento: <input value={dept} onChange={(e) => setDept(e.target.value)} />
-        <br/>
-        <input type="hidden" value={id} />
-        <button className="button-change">Enviar</button>
-        <a className="button-cancel" href="/">Cancelar</a>
-      </form>
+    <div>
+        <Header logout={logout} />
+        <div className='content-container'>
+        <h1>Editar Fiscalia</h1>
+        <form onSubmit={modificar} className="form">
+            Nombre: <input 
+                className="text-input" 
+                value={name} 
+                onChange={(e) => setName(e.target.value) } 
+            />
+            Lat: <input 
+                className="text-input" 
+                value={lat} 
+                onChange={(e) => setLat(e.target.value)} 
+            />
+            Lon: <input 
+                className="text-input" 
+                value={lon} 
+                onChange={(e) => setLon(e.target.value)} 
+            />
+            Telefono: <input 
+                className="text-input" 
+                value={phone} 
+                onChange={(e) => setPhone(e.target.value)} 
+            />
+            Departamento: <input 
+                className="text-input" 
+                value={dept} 
+                onChange={(e) => setDept(e.target.value)} />
+            <input type="hidden" value={id} />
+            <div>
+                <button className="button-change">Enviar</button>
+                <a className="button-cancel" href="/">Cancelar</a>
+            </div>
+        </form>
+        </div>
     </div> 
     )
   }
